@@ -1,0 +1,9 @@
+/* Override Tailwind Forms plugin agar textarea tidak putih */
+#prompt_input {
+    background-color: #1b1b1b !important;
+    color: #e2e2e2 !important;
+}
+
+#prompt_input::placeholder {
+    color: #4a4035;
+}

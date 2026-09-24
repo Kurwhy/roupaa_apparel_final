@@ -1,0 +1,107 @@
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -400px 0
+    }
+
+    100% {
+        background-position: 400px 0
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.45s cubic-bezier(.22, .68, 0, 1.2) forwards;
+    opacity: 0;
+}
+
+.d1 {
+    animation-delay: .05s
+}
+
+.d2 {
+    animation-delay: .10s
+}
+
+.d3 {
+    animation-delay: .16s
+}
+
+.d4 {
+    animation-delay: .22s
+}
+
+.d5 {
+    animation-delay: .28s
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #1e1e1e 25%, #2a2a2a 50%, #1e1e1e 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.4s infinite;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.badge-empty {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 600;
+    background: rgba(242, 202, 80, 0.07);
+    color: #b8922a;
+    border: 1px solid rgba(242, 202, 80, 0.18);
+}
+
+.modal-input {
+    width: 100%;
+    background: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e2e2e2;
+    font-family: 'Inter', sans-serif;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: #f2ca50;
+    box-shadow: 0 0 0 2px rgba(242, 202, 80, 0.12);
+}
+
+.modal-input::placeholder {
+    color: #4a4a4a;
+}
+
+#edit-modal {
+    transition: opacity .22s ease;
+}
+
+#edit-modal.modal-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-box {
+    transition: transform .25s cubic-bezier(.22, .68, 0, 1.2), opacity .22s ease;
+}
+
+#edit-modal.modal-hidden #modal-box {
+    transform: scale(0.94) translateY(12px);
+    opacity: 0;
+}

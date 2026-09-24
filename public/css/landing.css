@@ -1,0 +1,33 @@
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.dark-map {
+    filter: grayscale(100%) invert(92%) contrast(1.1) hue-rotate(180deg);
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+
+.dark-map:hover {
+    opacity: 1;
+    filter: grayscale(80%) invert(92%) contrast(1.1) hue-rotate(180deg);
+}
